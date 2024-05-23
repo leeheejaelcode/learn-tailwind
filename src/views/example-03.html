@@ -10,12 +10,9 @@
     />
     <link href="/css/style.css" rel="stylesheet" />
   </head>
-  <!-- 기본 글자 크기 16px / 글자 색상 black(#121212) / 글꼴은 SUIT Variable -->
-  <body class="mx-auto font-suit">
-    <!-- 좌우 안쪽여백 20px / 데스크탑 크기는 500px로 지정 후 해당 영역이 가운데 배치되도록 지정 -->
+  <body class="font-suit text-black">
     <div class="mx-auto px-5 md:w-[500px]">
-      <!-- 로고 가로크기 230px / 가운데 정렬 / 상단 여백 [70px, 100px] -->
-      <h1 class="mx-auto mt-[70px] w-[230px] font-black md:mt-[100px]">
+      <h1 class="mx-auto mt-[70px] w-[230px] md:mt-[100px]">
         <a href="/" class="">
           <picture>
             <source srcset="/assets/images/naver.svg" />
@@ -24,9 +21,7 @@
         </a>
       </h1>
 
-      <!-- 폼 상단여백 [44px, 48px] / 플렉스(col) gap 12px -->
       <form action="/" class="mt-11 flex flex-col gap-6 md:mt-12">
-        <!-- 글자 크기 14px / 입력서식 안쪽 여백 위아래 4px, 좌우 12px / 가로 100%, 높이 44px / 테두리 색상(색상 이외 굵기와 스타일도 지정해야 함) black-20 / 배경색상 white / 포커스 시 기본 아웃라인 제거 / 포커스 시 테두리 색상 primary / 포커스 시 배경 색상 blue-10 -->
         <div class="relative">
           <label for="userEmail" class="sr-only">아이디</label>
           <input
@@ -37,8 +32,8 @@
             required
             placeholder="아이디"
           />
-          <span class="text-warning absolute hidden text-sm peer-invalid:block"
-            >아이디는 이메일 형식이어야 합니다</span
+          <span class="text-warning absolute hidden text-xs peer-invalid:block"
+            >아이디는 이메일 형식이어야 합니다.</span
           >
         </div>
         <div class="">
@@ -52,67 +47,43 @@
             placeholder="비밀번호"
           />
         </div>
-        <!-- 체크박스, 텍스트 링크, 텍스트 스위치를 div 그룹으로 묶어서 배치 -->
-        <!-- 플렉스 컨테이너(row) / 메인 축 양쪽 정렬 / 아이템 순서 마지막으로 지정 -->
         <div class="order-1 flex flex-row justify-between">
-          <!-- 체크박스 컴포넌트 -->
-          <!-- input 요소를 absolute로 배치하기 위한 기준 컨테이너로 지정 -->
           <div class="relative">
-            <!-- 레이블의 형제 요소로 처리하기 위해 peer 클래스 추가 필요 / 기본 스타일 제거 / 절대위치 배치 / 가로, 세로 24px / 폼 플러그인 사용 시 글자색, 테두리색, 배경색을 투명으로 지정해야 함. checked 상태에서 제공되는 플러그인 이미지도 제거하기 위해 checked:bg-none 필요함. -->
             <input
+              class="euid-checkbox euid-focus peer"
               type="checkbox"
               id="saveLogin"
               name="saveLogin"
-              class="primary-focus peer absolute h-6 w-6"
             />
-            <!-- 인라인 블록으로 지정 후 24px로 높이 지정 필요 / 기본 배경이미지 지정 url('/assets/icons/unchecked.svg'), 배경이미지 반복되지 않도록 처리 / 좌측 여백 추가 28px / input 요소가 :checked 상태일 때 배경이미지 변경 url('/assets/icons/checked.svg') -->
-            <label
-              for="saveLogin"
-              class="inline-block h-6 bg-[url('/assets/icons/unchecked.svg')] bg-no-repeat pl-7 checked:bg-none peer-checked:bg-[url('/assets/icons/checked.svg')]"
+            <label for="saveLogin" class="euid-checkbox-label"
               >로그인 상태 유지</label
             >
           </div>
 
-          <!-- 텍스트 링크, 텍스트 스위치를 div 그룹으로 묶어서 배치 -->
-          <!-- 플렉스 컨테이너(row) / 갭 8px -->
           <div class="flex flex-row gap-2">
-            <!-- 링크텍스트(새창) 컴포넌트 -->
             <a
               href="/"
-              class="primary-focus"
+              class="euid-focus"
               target="_blank"
               rel="noopener noreferrer"
               >IP 보안</a
             >
 
-            <!-- 스위치(텍스트) 컴포넌트 -->
-            <!-- input 요소를 absolute로 배치하기 위한 기준 컨테이너로 지정 / ON,OFF 글자 길이에 따라 상자 크기가 변하지 않도록 가로 크기를 32px로 지정 -->
             <div class="relative">
-              <!-- 레이블의 형제 요소로 처리하기 위해 peer 클래스 추가 필요 / 기본 스타일 제거 / 절대위치 배치 / 가로, 세로 크기는 부모 크기와 동일하게 지정 / 폼 플러그인 사용 시 글자색, 테두리색, 배경색을 투명으로 지정해야 함. checked 상태에서 제공되는 플러그인 이미지도 제거하기 위해 checked:bg-none 필요함. -->
               <input
                 type="checkbox"
                 id="ipSecurity"
                 name="ipSecurity"
-                class="primary-focus peer absolute block h-full w-full"
+                class="euid-focus euid-switch peer"
               />
-              <!-- 글자 굵기 bold / after 가상요소 선택자로 'OFF' 정보 제공 / 형제 요소인 peer 클래스가 지정된 input 요소가 chedked 상태가 되면 after 가상요소 선택자로 추가한 텍스트를 'ON'으로 변경하고 글자색상은 primary로 지정  -->
-              <label
-                for="ipSecurity"
-                class="text-gray-20 peer-checked:text-primary block w-8 font-bold after:content-['OFF'] peer-checked:after:content-['ON']"
+              <label for="ipSecurity" class="euid-switch-label"
                 ><span class="sr-only">IP 보안</span></label
               >
             </div>
           </div>
         </div>
 
-        <!-- 버튼 컴포넌트 -->
-        <!-- 가로 100% / 세로 44px / 배경색 primary / 글자색 white -->
-        <button
-          type="button"
-          class="bg-primary warning-focus h-11 w-full text-white"
-        >
-          로그인
-        </button>
+        <button type="button" class="euid-button euid-focus">로그인</button>
       </form>
     </div>
   </body>
