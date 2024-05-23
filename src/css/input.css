@@ -1,26 +1,37 @@
-@tailwind base;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "./euid";
+@import "tailwindcss/utilities";
+@import "./customs";
+
+/* tailwind와 import는 함께 사용 불가능 */
+/* @tailwind base;
+@import "./custom-base-styles.css";
+
 @tailwind components;
-@layer components {
-  .euid-input {
-    @apply border-gray-20 focus:border-primary focus:bg-blue-10 h-11 w-full rounded-sm border bg-white px-3 py-1 text-sm outline-none;
-  }
-  .euid-focus {
-    @apply focus:ring-primary rounded-sm outline-none focus:ring-2;
-  }
-  .euid-button {
-    @apply bg-primary h-11 w-full text-white;
-  }
-  .euid-checkbox {
-    @apply absolute h-6 w-6 appearance-none;
-  }
-  .euid-checkbox-label {
-    @apply inline-block h-6 bg-[url('/assets/icons/unchecked.svg')] bg-no-repeat pl-7 peer-checked:bg-[url('/assets/icons/checked.svg')];
-  }
-  .euid-switch {
-    @apply absolute h-full w-full appearance-none;
-  }
-  .euid-switch-label {
-    @apply text-gray-20 peer-checked:text-primary block w-8 font-bold after:content-['OFF'] peer-checked:after:content-['ON'];
+@import "./custom-components.css";
+
+@tailwind utilities;
+@import "./custom-utilities.css"; */
+
+/* import단일로 사용 가능 */
+/* @import "tailwindcss/base";
+@import "./custom-base-styles.css";
+
+@import "tailwindcss/components";
+@import "./custom-components.css";
+
+@import "tailwindcss/utilities";
+@import "./custom-utilities.css"; */
+
+/* 터미널에 npm install -D postcss-import 
+
+// postcss.config.js에 추가
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    tailwindcss: {},
+    autoprefixer: {},
   }
 }
-@tailwind utilities;
+*/
