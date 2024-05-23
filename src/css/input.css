@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* apply를 통해서 컴포넌트식으로 사용하는 방법 */
 @layer components {
   .euid-input {
-    @apply rounded-full bg-violet-500 px-5 py-2 font-semibold text-white shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+    @apply border-gray-20 focus:border-primary focus:bg-blue-10 h-11 w-full rounded-sm border bg-white px-3 py-1 text-sm outline-none;
   }
 }
