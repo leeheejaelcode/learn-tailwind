@@ -629,6 +629,32 @@ video {
   --tw-contain-style:  ;
 }
 
+.euid-input {
+  height: 2.75rem;
+  width: 100%;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(153 153 153 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.euid-input:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(3 207 93 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 240 253 / var(--tw-bg-opacity));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -676,10 +702,6 @@ video {
   display: none;
 }
 
-.h-11 {
-  height: 2.75rem;
-}
-
 .h-12 {
   height: 3rem;
 }
@@ -706,10 +728,6 @@ video {
 
 .w-\[230px\] {
   width: 230px;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .flex-col {
@@ -745,23 +763,6 @@ video {
   border-radius: 0.5rem;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-solid {
-  border-style: solid;
-}
-
-.border-gray-20 {
-  --tw-border-opacity: 1;
-  border-color: rgb(153 153 153 / var(--tw-border-opacity));
-}
-
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
@@ -790,19 +791,9 @@ video {
   padding: 1.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .font-suit {
@@ -841,11 +832,6 @@ video {
   color: rgb(255 20 20 / var(--tw-text-opacity));
 }
 
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .drop-shadow-lg {
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -861,22 +847,14 @@ video {
           transition-duration: 150ms;
 }
 
+/* apply를 통해서 컴포넌트식으로 사용하는 방법 */
+
 .checked\:bg-none:checked {
   background-image: none;
 }
 
 .hover\:fill-blue-600:hover {
   fill: #2563eb;
-}
-
-.focus\:border-primary:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(3 207 93 / var(--tw-border-opacity));
-}
-
-.focus\:bg-blue-10:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 240 253 / var(--tw-bg-opacity));
 }
 
 .focus\:text-red-500:focus {
