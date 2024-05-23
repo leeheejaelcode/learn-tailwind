@@ -54,36 +54,51 @@
         </div>
         <!-- 체크박스, 텍스트 링크, 텍스트 스위치를 div 그룹으로 묶어서 배치 -->
         <!-- 플렉스 컨테이너(row) / 메인 축 양쪽 정렬 / 아이템 순서 마지막으로 지정 -->
-        <div class="">
+        <div class="order-1 flex flex-row justify-between">
           <!-- 체크박스 컴포넌트 -->
           <!-- input 요소를 absolute로 배치하기 위한 기준 컨테이너로 지정 -->
-          <div class="">
+          <div class="relative">
             <!-- 레이블의 형제 요소로 처리하기 위해 peer 클래스 추가 필요 / 기본 스타일 제거 / 절대위치 배치 / 가로, 세로 24px / 폼 플러그인 사용 시 글자색, 테두리색, 배경색을 투명으로 지정해야 함. checked 상태에서 제공되는 플러그인 이미지도 제거하기 위해 checked:bg-none 필요함. -->
-            <input type="checkbox" id="saveLogin" name="saveLogin" class="" />
+            <input
+              type="checkbox"
+              id="saveLogin"
+              name="saveLogin"
+              class="focus:ring-primary peer absolute h-6 w-6 appearance-none rounded-sm outline-none focus:ring-2"
+            />
             <!-- 인라인 블록으로 지정 후 24px로 높이 지정 필요 / 기본 배경이미지 지정 url('/assets/icons/unchecked.svg'), 배경이미지 반복되지 않도록 처리 / 좌측 여백 추가 28px / input 요소가 :checked 상태일 때 배경이미지 변경 url('/assets/icons/checked.svg') -->
-            <label for="saveLogin" class="">로그인 상태 유지</label>
+            <label
+              for="saveLogin"
+              class="inline-block h-6 bg-[url('/assets/icons/unchecked.svg')] bg-no-repeat pl-7 checked:bg-none peer-checked:bg-[url('/assets/icons/checked.svg')]"
+              >로그인 상태 유지</label
+            >
           </div>
 
           <!-- 텍스트 링크, 텍스트 스위치를 div 그룹으로 묶어서 배치 -->
           <!-- 플렉스 컨테이너(row) / 갭 8px -->
-          <div class="">
+          <div class="flex flex-row gap-2">
             <!-- 링크텍스트(새창) 컴포넌트 -->
-            <a href="/" class="" target="_blank" rel="noopener noreferrer"
+            <a
+              href="/"
+              class="focus:ring-primary rounded-sm outline-none focus:ring-2"
+              target="_blank"
+              rel="noopener noreferrer"
               >IP 보안</a
             >
 
             <!-- 스위치(텍스트) 컴포넌트 -->
             <!-- input 요소를 absolute로 배치하기 위한 기준 컨테이너로 지정 / ON,OFF 글자 길이에 따라 상자 크기가 변하지 않도록 가로 크기를 32px로 지정 -->
-            <div class="">
+            <div class="relative">
               <!-- 레이블의 형제 요소로 처리하기 위해 peer 클래스 추가 필요 / 기본 스타일 제거 / 절대위치 배치 / 가로, 세로 크기는 부모 크기와 동일하게 지정 / 폼 플러그인 사용 시 글자색, 테두리색, 배경색을 투명으로 지정해야 함. checked 상태에서 제공되는 플러그인 이미지도 제거하기 위해 checked:bg-none 필요함. -->
               <input
                 type="checkbox"
                 id="ipSecurity"
                 name="ipSecurity"
-                class=""
+                class="focus:ring-primary peer absolute block h-full w-full appearance-none rounded-sm outline-none focus:ring-2"
               />
               <!-- 글자 굵기 bold / after 가상요소 선택자로 'OFF' 정보 제공 / 형제 요소인 peer 클래스가 지정된 input 요소가 chedked 상태가 되면 after 가상요소 선택자로 추가한 텍스트를 'ON'으로 변경하고 글자색상은 primary로 지정  -->
-              <label for="ipSecurity" class=""
+              <label
+                for="ipSecurity"
+                class="text-gray-20 peer-checked:text-primary block w-8 font-bold after:content-['OFF'] peer-checked:after:content-['ON']"
                 ><span class="sr-only">IP 보안</span></label
               >
             </div>
@@ -92,7 +107,12 @@
 
         <!-- 버튼 컴포넌트 -->
         <!-- 가로 100% / 세로 44px / 배경색 primary / 글자색 white -->
-        <button type="button" class="">로그인</button>
+        <button
+          type="button"
+          class="bg-primary focus:ring-warning h-11 w-full rounded-sm text-white outline-none focus:ring-2"
+        >
+          로그인
+        </button>
       </form>
     </div>
   </body>
