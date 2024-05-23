@@ -1,1 +1,1 @@
-# learn-tailwind
+# learn-tailwind 실습
