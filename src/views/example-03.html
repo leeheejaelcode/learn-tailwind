@@ -11,38 +11,41 @@
     <link href="/css/style.css" rel="stylesheet" />
   </head>
   <!-- 기본 글자 크기 16px / 글자 색상 black(#121212) / 글꼴은 SUIT Variable -->
-  <body class="">
+  <body class="mx-auto font-suit">
     <!-- 좌우 안쪽여백 20px / 데스크탑 크기는 500px로 지정 후 해당 영역이 가운데 배치되도록 지정 -->
-    <div class="">
+    <div class="mx-auto px-5 md:w-[500px]">
       <!-- 로고 가로크기 230px / 가운데 정렬 / 상단 여백 [70px, 100px] -->
-      <h1 class="">
+      <h1 class="mx-auto mt-[70px] w-[230px] font-black md:mt-[100px]">
         <a href="/" class="">
           <picture>
             <source srcset="/assets/images/naver.svg" />
-            <img class="w-full" src="/assets/images/naver.png" alt="네이버" />
+            <img class="" src="/assets/images/naver.png" alt="네이버" />
           </picture>
         </a>
       </h1>
 
       <!-- 폼 상단여백 [44px, 48px] / 플렉스(col) gap 12px -->
-      <form action="/" class="">
-        <!-- 글자 크기 14px / 입력서식 안쪽 여백 위아래 4px, 좌우 12px / 가로 100%, 높이 44px / 테두리 색상(색상 이외 굵기와 스타일도 지정해야 함) black-20 / 배경색상 white / 포커스 시 기본 아운라인 제거 / 포커스 시 테두리 색상 primary / 포커스 시 배경 색상 blue-10 -->
-        <div class="">
+      <form action="/" class="mt-11 flex flex-col gap-6 md:mt-12">
+        <!-- 글자 크기 14px / 입력서식 안쪽 여백 위아래 4px, 좌우 12px / 가로 100%, 높이 44px / 테두리 색상(색상 이외 굵기와 스타일도 지정해야 함) black-20 / 배경색상 white / 포커스 시 기본 아웃라인 제거 / 포커스 시 테두리 색상 primary / 포커스 시 배경 색상 blue-10 -->
+        <div class="relative">
           <label for="userEmail" class="sr-only">아이디</label>
           <input
-            class=""
-            type="text"
+            class="border-gray-20 focus:border-primary focus:bg-blue-10 peer h-11 w-full rounded-sm border border-solid bg-white px-3 py-1 text-sm outline-none"
+            type="email"
             id="userEmail"
             name="userEmail"
             required
             placeholder="아이디"
           />
+          <span class="text-warning absolute hidden text-sm peer-invalid:block"
+            >아이디는 이메일 형식이어야 합니다</span
+          >
         </div>
         <div class="">
           <label for="userPw" class="sr-only">비밀번호</label>
           <input
-            class=""
-            type="text"
+            class="border-gray-20 focus:border-primary focus:bg-blue-10 peer h-11 w-full rounded-sm border border-solid bg-white px-3 py-1 text-sm outline-none"
+            type="password"
             id="userPw"
             name="userPw"
             required
