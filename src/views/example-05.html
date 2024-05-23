@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatars 예제</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body class="m-5 flex flex-col gap-5 font-suit">
+    <div class="flex flex-row gap-8">
+      <figure class="relative h-20 w-20">
+        <img class="rounded-full" src="/assets/faces/face1.jpg" alt="" />
+        <figcaption
+          class="bg-primary absolute bottom-0 right-0 h-6 w-6 rounded-full shadow-[0_0_0_2px_white]"
+        >
+          <span class="sr-only">온라인</span>
+        </figcaption>
+      </figure>
+      <figure class="relative h-20 w-20">
+        <img class="rounded-full" src="/assets/faces/face1.jpg" alt="" />
+        <figcaption
+          class="bg-gray-10 absolute bottom-0 right-0 h-6 w-6 rounded-full border-8 border-black shadow-[0_0_0_2px_white]"
+        >
+          <span class="sr-only">오프라인</span>
+        </figcaption>
+      </figure>
+    </div>
+    <hr />
+    <!-- 플렉스(row) / X 축으로 아이템이 겹치도록 설정(space-*) -->
+    <div class="flex flex-row -space-x-4">
+      <!-- 기준 컨테이너 / 가로, 세로 80px -->
+      <figure class="h-20 w-20">
+        <!-- 그룹으로 지정 (!중요 포인트) / 기본 아웃라인 제거-->
+        <a class="group outline-none" href="/">
+          <!-- z-index 조절을 위한 relative 선언 -->
+          <!-- 라운딩 처리 테두리 선 1px / 테두리 선 색상 gray-20 -->
+          <!-- hover나 focus 시 group-*를 활용하여 테두리 선 두께 및 색상 변경 (primary) -->
+          <img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face1.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face2.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face3.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face4.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face5.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face6.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face7.jpg"
+            alt=""
+        /></a>
+      </figure>
+      <figure class="h-20 w-20">
+        <a class="group outline-none" href="/"
+          ><img
+            class="border-gray-20 group-focus:border-primary group-hover:border-primary relative rounded-full border blur group-hover:z-10 group-hover:blur-none group-focus:z-10 group-focus:grayscale"
+            src="/assets/faces/face8.jpg"
+            alt=""
+        /></a>
+      </figure>
+    </div>
+  </body>
+</html>
