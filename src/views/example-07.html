@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내비게이션</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body class="">
+    <!-- 최소 너비 320px / 안쪽 여백 24px / 플렉스(row, 줄바꿈 허용) 갭 16px / 배경 white / 768px 이상에서는 줄바꿈 허용 X, 메인 축 양쪽 정렬 / 교차축 가운데 정렬 / 박스그림자로 아래 경계선 만들기 / 스티키 포지션으로 지정해서 스크롤 시 헤더 고정 /  -->
+    <div
+      class="sticky top-0 flex min-w-80 flex-row flex-wrap items-center justify-between gap-4 bg-white p-6 font-suit shadow-[0_1px_1px_1px_rgba(0,0,0,0.15)] md:flex-nowrap"
+    >
+      <!-- 로고 크기는 부모 크기 기준 1/12로 지정하고 최소 너비는 96픽셀로 지정 -->
+      <h1 class="w-1/12 min-w-24">
+        <a href="/"><img src="/assets/images/naver.svg" alt="네이버" /></a>
+      </h1>
+      <!-- 모바일 환경에서 배치 순서는 마지막으로 지정 / 768px 이상일 경우 순서는 마크업 순서로 변경 / 가로 크기는 100%, 768px이상에서는 auto로 변경 -->
+      <nav class="order-1 w-full md:order-none md:w-auto">
+        <!-- 메뉴 목록은 그리드를 사용하여 배치 / 그리드 컬럼은 5개, 768px이상의 경우 그리드 컬럼은 10개 -->
+        <ul class="grid grid-cols-5 md:grid-cols-10">
+          <!-- a 요소에 스타일링 글자 색상 gray-30 / 폭이 좁아질 때 줄바꿈이 생기지 않도록 처리 / 그리드 셀 내부에서 글자는 가운데 정렬 -->
+          <!-- / block 설정 / 안쪽으로 8px 여백 지정 / 마우스 오버나 키보드 포커스 시 언더라인 스타일 지정 / 언더라인 offset은 8 -->
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >메일</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >카페</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >블로그</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >쇼핑</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >뉴스</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >증권</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >부동산</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >지도</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >웹툰</a
+            >
+          </li>
+          <li class="group">
+            <a
+              href="/"
+              class="text-gray-30 block whitespace-nowrap p-2 text-center no-underline underline-offset-8 group-hover:underline"
+              >치지직</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- 로그인과 회원가입 버튼(링크) 영역이 반응형 시 축소되지 않도록 처리 -->
+      <div class="shrink-0">
+        <!-- 테두리 / 라운딩 / 배경색 primary / 글자색상 white / 선형 그라디언트 (bg-gradient-to-r) -->
+        <!-- 그라디언트 효과는 마우스 오버나 키보드 포커스 시 적용되도록 설정 -->
+        <!-- 그라디언트 시작색상은 indigo-500 종료 색상은 red-500 -->
+        <a href="/" class="">로그인</a>
+        <a href="/" class="">회원가입</a>
+      </div>
+    </div>
+  </body>
+</html>
